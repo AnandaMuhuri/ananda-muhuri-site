@@ -8,7 +8,7 @@
 
 export const profile = {
   name: "Ananda Muhuri",
-  role: "Software Development Engineer (Backend) at Stashfin",
+  role: "Software Development Engineer",
   tagline:
     "Backend engineer building fintech systems at Stashfin. Also a photographer and painter.",
   summary:
