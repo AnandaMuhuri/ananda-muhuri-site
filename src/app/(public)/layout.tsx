@@ -2,6 +2,7 @@ import Link from "next/link";
 import { profile } from "@/lib/mock-data";
 import { SocialLinks } from "@/components/SocialLinks";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { MotionProvider } from "@/components/motion/MotionProvider";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -60,7 +61,7 @@ export default function PublicLayout({
         </details>
       </header>
 
-      {children}
+      <MotionProvider>{children}</MotionProvider>
 
       <footer className="border-border mt-24 border-t px-6 py-10 sm:px-10">
         <div className="mx-auto flex max-w-4xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
