@@ -73,6 +73,16 @@ export default async function AboutPage() {
             <div className="mt-12">
               <Timeline items={experience} />
             </div>
+
+            <div className="relative mt-12 aspect-[3/4] w-full max-w-xs overflow-hidden rounded-sm">
+              <Image
+                src="/photos/stashfin-joining-day.jpeg"
+                alt="First day at Stashfin"
+                fill
+                sizes="(min-width: 768px) 320px, 100vw"
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
       </section>
