@@ -7,7 +7,7 @@ export function AlbumCard({ album }: { album: MockAlbum }) {
 
   return (
     <Link href={`/create/${album.slug}`} className="group block">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-foreground/5">
+      <div className="bg-foreground/5 relative aspect-[4/3] overflow-hidden rounded-lg">
         {cover && (
           <Image
             src={cover.src}
@@ -18,10 +18,10 @@ export function AlbumCard({ album }: { album: MockAlbum }) {
           />
         )}
       </div>
-      <h3 className="mt-3 font-serif text-lg transition-colors group-hover:text-accent">
+      <h3 className="group-hover:text-accent mt-3 font-serif text-lg transition-colors">
         {album.title}
       </h3>
-      <p className="text-sm text-muted">{album.photos.length} photos</p>
+      <p className="text-muted text-sm">{album.photos.length} photos</p>
     </Link>
   );
 }

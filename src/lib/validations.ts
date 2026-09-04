@@ -3,7 +3,10 @@ import { z } from "zod";
 const slug = z
   .string()
   .min(1)
-  .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "lowercase letters, numbers, hyphens only");
+  .regex(
+    /^[a-z0-9]+(?:-[a-z0-9]+)*$/,
+    "lowercase letters, numbers, hyphens only",
+  );
 
 export const projectSchema = z.object({
   title: z.string().min(1),

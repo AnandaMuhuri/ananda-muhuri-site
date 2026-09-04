@@ -13,21 +13,42 @@ export function ProjectCard({
   return (
     <Link
       href={`/work/${project.slug}`}
-      className="group grid grid-cols-[2rem_1fr_auto] items-baseline gap-x-6 border-b border-border py-6 sm:grid-cols-[2.5rem_1fr_auto]"
+      className="group border-border grid grid-cols-[2rem_1fr_auto] gap-x-4 border-b py-8 transition-colors sm:grid-cols-[3rem_1fr_auto] sm:gap-x-8 sm:py-10"
     >
-      <span className="text-sm text-muted">
+      {/* Number */}
+      <span className="text-muted pt-1 text-xs tracking-widest">
         {String(index + 1).padStart(2, "0")}
       </span>
-      <div>
-        <h3 className="font-serif text-xl transition-colors group-hover:text-accent">
-          {project.title}
-        </h3>
-        <p className="mt-1 text-sm text-muted">{project.summary}</p>
-        <p className="mt-2 text-xs uppercase tracking-widest text-muted">
+
+      {/* Project information */}
+      <div className="min-w-0">
+        <div className="flex items-baseline gap-3">
+          <h3 className="group-hover:text-accent font-serif text-xl tracking-tight transition-colors duration-300 sm:text-2xl">
+            {project.title}
+          </h3>
+
+          {/* <span className="text-muted hidden text-xs tracking-widest uppercase sm:inline">
+            Project
+          </span> */}
+        </div>
+
+        <p className="text-muted mt-2 max-w-xl text-sm leading-6">
+          {project.summary}
+        </p>
+
+        <p className="text-muted mt-4 text-[11px] tracking-[0.16em] uppercase">
           {project.tags.join(" · ")}
         </p>
       </div>
-      <span className="text-sm text-muted">{year}</span>
+
+      {/* Year + arrow */}
+      <div className="flex h-full flex-col items-end justify-between gap-8">
+        <span className="text-muted text-xs">{year}</span>
+
+        <span className="text-muted group-hover:text-accent text-lg transition-all duration-300 group-hover:translate-x-1">
+          →
+        </span>
+      </div>
     </Link>
   );
 }

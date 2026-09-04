@@ -19,11 +19,20 @@ export const profile = {
   instagram: "https://www.instagram.com/ananda_muhuri.go",
   facebook: "https://www.facebook.com/ananda.muhuri.09",
   twitter: "https://twitter.com/ananda_muhuri",
-  whatsapp: "https://api.whatsapp.com/send?phone=+91-8731910655&text=Hello,more information!!",
+  whatsapp:
+    "https://api.whatsapp.com/send?phone=+91-8731910655&text=Hello,more information!!",
+  // Hero (homepage): atmospheric/mood shot, doesn't need a clear face.
   photo: {
     src: "/photos/hilltop-sunrise.jpg",
     width: 960,
     height: 1280,
+  },
+  // About page: face clearly visible, since that section's job is
+  // introducing the person.
+  aboutPhoto: {
+    src: "/photos/professional_pic.png",
+    width: 1254,
+    height: 1254,
   },
 };
 
@@ -96,7 +105,15 @@ export const mockProjects: MockProject[] = [
       "Reusable, multi-tenant notification microservice with independently scalable API/worker processes.",
     description:
       "Designed a reusable, multi-tenant notification microservice with independently scalable API/worker processes and interfaces (Dependency Inversion) behind the repository, queue, and provider layers, so Prisma, BullMQ, and the email provider are swappable and unit-testable with mocks.\n\nBuilt idempotent enqueueing and exponential-backoff retries via BullMQ/Redis, with a pluggable EmailProvider adapter (Resend) designed for drop-in SES/SendGrid support.",
-    tags: ["Node.js", "TypeScript", "Express", "BullMQ", "Redis", "PostgreSQL", "Prisma"],
+    tags: [
+      "Node.js",
+      "TypeScript",
+      "Express",
+      "BullMQ",
+      "Redis",
+      "PostgreSQL",
+      "Prisma",
+    ],
     links: {},
     startDate: "2026-01-01",
     endDate: null,

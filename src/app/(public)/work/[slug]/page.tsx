@@ -10,8 +10,8 @@ export default async function ProjectPage(props: PageProps<"/work/[slug]">) {
   return (
     <main className="mx-auto max-w-2xl px-6 py-16 sm:px-10">
       <h1 className="font-serif text-3xl">{project.title}</h1>
-      <p className="mt-3 text-muted">{project.summary}</p>
-      <ul className="mt-4 flex flex-wrap gap-x-3 gap-y-1 text-xs uppercase tracking-widest text-muted">
+      <p className="text-muted mt-3">{project.summary}</p>
+      <ul className="text-muted mt-4 flex flex-wrap gap-x-3 gap-y-1 text-xs tracking-widest uppercase">
         {project.tags.map((tag) => (
           <li key={tag}>{tag}</li>
         ))}
@@ -38,7 +38,7 @@ export default async function ProjectPage(props: PageProps<"/work/[slug]">) {
           </a>
         )}
       </div>
-      <p className="mt-10 whitespace-pre-wrap leading-relaxed text-foreground/80">
+      <p className="text-foreground/80 mt-10 leading-relaxed whitespace-pre-wrap">
         {project.description}
       </p>
     </main>

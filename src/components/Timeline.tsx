@@ -2,7 +2,10 @@ import type { MockExperience } from "@/lib/mock-data";
 
 function formatRange(start: string, end: string | null) {
   const fmt = (d: string) =>
-    new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "short" });
+    new Date(d).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+    });
   return `${fmt(start)} — ${end ? fmt(end) : "Present"}`;
 }
 
@@ -15,11 +18,11 @@ export function Timeline({ items }: { items: MockExperience[] }) {
             <h3 className="font-medium">
               {item.role} · {item.company}
             </h3>
-            <span className="text-sm text-muted">
+            <span className="text-muted text-sm">
               {formatRange(item.startDate, item.endDate)}
             </span>
           </div>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-muted">
+          <ul className="text-muted mt-2 list-disc space-y-1 pl-5 text-sm">
             {item.highlights.map((point, i) => (
               <li key={i}>{point}</li>
             ))}

@@ -2,13 +2,23 @@ import { profile } from "@/lib/mock-data";
 
 function MailIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} {...props}>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.5}
+      {...props}
+    >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M2.25 6.75c0-.621.504-1.125 1.125-1.125h17.25c.621 0 1.125.504 1.125 1.125v10.5c0 .621-.504 1.125-1.125 1.125H3.375A1.125 1.125 0 0 1 2.25 17.25V6.75Z"
       />
-      <path strokeLinecap="round" strokeLinejoin="round" d="m3 6.75 9 6.75 9-6.75" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m3 6.75 9 6.75 9-6.75"
+      />
     </svg>
   );
 }
@@ -84,7 +94,7 @@ export function SocialLinks({ className }: { className?: string }) {
               rel={external ? "noreferrer" : undefined}
               aria-label={label}
               title={label}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted transition-colors hover:border-accent hover:text-accent"
+              className="border-border text-muted hover:border-accent hover:text-accent flex h-9 w-9 items-center justify-center rounded-full border transition-colors"
             >
               <Icon className="h-4 w-4" />
             </a>

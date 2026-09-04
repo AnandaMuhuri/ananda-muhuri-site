@@ -6,7 +6,7 @@ export default async function CreatePage() {
 
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 sm:px-10">
-      <p className="text-sm text-muted">02 — Create</p>
+      <p className="text-muted text-sm">02 — Create</p>
       <h1 className="mt-2 font-serif text-3xl">
         Some things I make when I&apos;m not writing code.
       </h1>

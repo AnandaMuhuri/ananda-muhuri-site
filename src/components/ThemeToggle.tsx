@@ -6,9 +6,7 @@ function currentTheme(): "light" | "dark" {
   if (typeof document === "undefined") return "light";
   return (
     (document.documentElement.getAttribute("data-theme") as
-      | "light"
-      | "dark"
-      | null) ?? "light"
+      "light" | "dark" | null) ?? "light"
   );
 }
 
@@ -28,7 +26,7 @@ export function ThemeToggle() {
       onClick={toggle}
       aria-label="Toggle theme"
       title="Toggle theme"
-      className="flex h-6 w-6 items-center justify-center text-foreground/70 transition-colors hover:text-foreground"
+      className="text-foreground/70 hover:text-foreground flex h-6 w-6 items-center justify-center transition-colors"
     >
       <span aria-hidden>◐</span>
     </button>

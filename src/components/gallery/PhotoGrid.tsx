@@ -58,7 +58,7 @@ export function PhotoGrid({ photos }: { photos: MockPhoto[] }) {
             type="button"
             onClick={close}
             aria-label="Close"
-            className="absolute right-4 top-4 text-2xl text-white/80 hover:text-white"
+            className="absolute top-4 right-4 text-2xl text-white/80 hover:text-white"
           >
             ✕
           </button>

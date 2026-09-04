@@ -11,7 +11,9 @@ export default async function AlbumPage(props: PageProps<"/create/[slug]">) {
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 sm:px-10">
       <h1 className="font-serif text-3xl">{album.title}</h1>
-      {album.description && <p className="mt-2 text-muted">{album.description}</p>}
+      {album.description && (
+        <p className="text-muted mt-2">{album.description}</p>
+      )}
       <div className="mt-10">
         <PhotoGrid photos={album.photos} />
       </div>

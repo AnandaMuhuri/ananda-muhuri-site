@@ -1,0 +1,4 @@
+node_modules
+.next
+db/types.d.ts
+package-lock.json
