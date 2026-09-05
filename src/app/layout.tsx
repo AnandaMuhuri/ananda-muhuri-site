@@ -19,9 +19,51 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Ananda Muhuri",
+  metadataBase: new URL("https://ananda-muhuri.vercel.app"),
+
+  title: {
+    default: "Ananda Muhuri — Software Development Engineer",
+    template: "%s — Ananda Muhuri",
+  },
+
   description:
-    "Backend engineer at Stashfin. Portfolio, projects, and photography.",
+    "Portfolio of Ananda Muhuri, a Software Development Engineer building backend systems, APIs, and modern web applications.",
+
+  keywords: [
+    "Ananda Muhuri",
+    "Ananda Muhuri Software Engineer",
+    "Ananda Muhuri Developer",
+    "Software Development Engineer",
+    "Backend Engineer",
+    "Backend Developer",
+    "Node.js Developer",
+    "TypeScript Developer",
+  ],
+
+  authors: [
+    {
+      name: "Ananda Muhuri",
+    },
+  ],
+
+  creator: "Ananda Muhuri",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  openGraph: {
+    title: "Ananda Muhuri — Software Development Engineer",
+    description: "Portfolio of Ananda Muhuri, a Software Development Engineer.",
+    url: "https://ananda-muhuri.vercel.app/",
+    siteName: "Ananda Muhuri",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const themeInitScript = `
